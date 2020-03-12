@@ -64,7 +64,7 @@ print(line)
 try:
     SHOTGUN_SCRIPT_NAME=str(os.environ['SHOTGUN_SCRIPT_NAME'])
     SHOTGUN_SCRIPT_KEY=int(os.environ['SHOTGUN_SCRIPT_KEY'])
-	  SHOTGUN_HOST_NAME=str(os.environ['SHOTGUN_HOST_NAME'])	
+    SHOTGUN_HOST_NAME=str(os.environ['SHOTGUN_HOST_NAME'])	
 except Exception as e:
     raise ValueError('Error while accessing Shotgun details from environment variables')
     logger.info('Error while accessing Shotgun details from environment variables')
@@ -119,7 +119,7 @@ def main():
 		print(response)
 		
     sg = shotgun_api3.Shotgun(SHOTGUN_HOST_NAME, SHOTGUN_SCRIPT_NAME, SHOTGUN_SCRIPT_KEY)
-	  sg.create("Reply", {"entity": {"type": "Delivery", "id": entity_id},"content": "AWS Copy Started..."})
+    sg.create("Reply", {"entity": {"type": SHOTGUN_ENTITY_TYPE, "id": SHOTGUN_ENTITY_ID},"content": "AWS Copy Completed..."})
     
 	
 if __name__ == '__main__':
