@@ -7,6 +7,7 @@ import re
 import logging
 import sys
 import sentry_sdk
+import shotgun_api3
 from sentry_sdk.integrations.logging import ignore_logger
 sentry_sdk.init(dsn='https://2fee4ed938294813aeeb28f08e3614b8@sentry.io/1858927')
 
