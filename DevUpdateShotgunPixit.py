@@ -18,7 +18,7 @@ logger.setLevel(logging.INFO)
 
 UAP_SNS_TOPIC="arn:aws:sns:us-east-1:398469702425:AASNS"
 
-BUCKET='aws-batch-parameters'
+BUCKET='aws-batch-parameter'
 KEY=str(sys.argv[1])
 session = boto3.Session()
 #print dir(session)
